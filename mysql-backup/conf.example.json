@@ -2,7 +2,7 @@
   "bucket": "your bucket name",
   "backup_dir": "the path in bucket",
   "mysqldump_docker": "mysqldump",
-  "mysqldump_local": "/usr/local/bin/mysqldump",
+  "mysqldump_local": "/usr/bin/mysqldump",
   "qshell": "./cmd/qshellmac",
   "keep_days": 7,
   "connections": [
@@ -10,17 +10,17 @@
       "type": "docker",
       "container": "mysql56",
       "connection": "mysql56",
-      "username": "root",
-      "password": "your password",
-      "databases": "market_uiaoin_com_111"
+      "username": "username",
+      "password": "password",
+      "databases": "your database name"
     },
     {
       "type": "local",
       "container": "",
       "connection": "localhost",
-      "username": "root",
-      "password": "your password",
-      "databases": "app,market_uiaoin_com"
+      "username": "username",
+      "password": "password",
+      "databases": "app,demo"
     }
   ]
 }
