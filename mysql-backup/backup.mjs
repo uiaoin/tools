@@ -7,13 +7,12 @@ import { createRequire } from 'module'
 import {dirname} from 'path'
 import {fileURLToPath} from 'url'
 
-const require = createRequire(import.meta.url)
-const conf = require('./conf.json')
-const time = moment().format('YYYY_MM_DD_hhmmss')
-const date = moment().format('YYYY_MM_DD')
-
 // 获取运行目录
 const runningDir = dirname( fileURLToPath(import.meta.url))
+const require = createRequire(import.meta.url)
+const conf = require(`${runningDir}/conf.json`)
+const time = moment().format('YYYY_MM_DD_hhmmss')
+const date = moment().format('YYYY_MM_DD')
 const dataDir = `${runningDir}/data`
 const backupDir = `${runningDir}/data/${date}`
 if (! fs.existsSync(backupDir)) {
